@@ -1,0 +1,326 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+header {
+	width: 100%;
+	height: 110px;
+}
+
+.head {
+	width: 1210px;
+	margin: 0 auto;
+	padding-top: 24px;
+}
+
+.head-left {
+	float: left;
+	overflow: hidden;
+}
+
+.logo {
+	display: block;
+	width: 160px;
+	height: 50px;
+	float: left;
+	background: url(img/jingling2.png) no-repeat left top;
+}
+
+.welcome {
+	float: left;
+	display: inline-block;
+	font-weight: 100;
+	margin-top: 10px;
+}
+
+.head-right {
+	float: right;
+	position: relative;
+	top: 40px;
+}
+
+.head-right span {
+	display: inline-block;
+	background: url(img/q-icon.png) no-repeat;
+	width: 18px;
+	height: 14px;
+	margin: 0 5px;
+	overflow: hidden;
+	vertical-align: middle;
+}
+
+.plase {
+	font-size: 16px;
+	float: right;
+	color: #999999;
+}
+
+.plase:hover {
+	color: red;
+	text-decoration: underline;
+}
+
+.safety {
+	width: 100%;
+	padding: 10px 0;
+	background: #fff8f0;
+}
+
+.safety p {
+	text-align: center;
+	color: #999999;
+	font-size: 14px;
+}
+
+.jinggao {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	vertical-align: middle;
+	margin-right: 3px;
+	background: url(img/jingling2.png) no-repeat;
+	background-position: 0 -100px;
+}
+
+.safety p a {
+	color: red;
+	font-size: 14px;
+}
+
+article {
+	width: 100%;
+	height: 475px;
+	background: #e93854;
+}
+
+.content {
+	width: 990px;
+	height: 100%;
+	position: relative;
+	margin: 0 auto;
+	background: url(img/denglu.png) no-repeat;
+}
+
+form {
+	width: 346px;
+	background: white;
+	position: absolute;
+	top: 10px;
+	right: 0;
+}
+
+.tishi {
+	display: block;
+	font-size: 12px;
+	padding: 10px;
+	background: #fff8f0;
+	text-align: center;
+	color: #999999;
+}
+
+.mode {
+	width: 100%;
+	border-bottom: 1px solid #999999;
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+
+.mode li {
+	/* padding: 20px 0; */
+	float: left;
+	width: 173px;
+	text-align: center;
+	height: 54px;
+	font-size: 18px;
+	line-height: 54px;
+	position: relative;
+
+}
+
+.saoma:after {
+	content: "";
+	display: block;
+	width: 1px;
+	height: 20px;
+	position: absolute;
+	top: 50%;
+	margin-top: -10px;
+	right: 0;
+	background: #f4f4f4;
+}
+
+.mode li a {
+	height: 20px;
+	color: #666;
+}
+
+.mode .selected a {
+	color: #C81623;
+}
+
+.user {
+	margin-left: 20px;
+	display: inline-block;
+	vertical-align: top;
+	width: 38px;
+	height: 38px;
+	border: 1px solid #bdbdbd;
+	background: url(img/denglu-jing.png) no-repeat;
+	background-position: 0 0;
+}
+
+.pass {
+	margin-left: 20px;
+	display: inline-block;
+	vertical-align: top;
+	width: 38px;
+	height: 38px;
+	border: 1px solid #bdbdbd;
+	background: url(img/denglu-jing.png) no-repeat;
+	background-position: -48px 0;
+}
+
+#user,
+#pass {
+	line-height: 18px;
+	height: 18px;
+	border: 0;
+	padding: 10px 0 10px 10px;
+	width: 254px;
+	outline: none;
+	float: none;
+	overflow: hidden;
+	font-size: 14px;
+	border: 1px solid #BDBDBD;
+	border-left: none;
+	margin-bottom: 20px;
+}
+
+.forget {
+	float: right;
+	color: #C81623;
+	margin-right: 22px;
+}
+
+.forget:hover {
+	text-decoration: underline;
+}
+
+.forget-box {
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+
+.submit {
+	border: 1px solid #e85356;
+	display: block;
+	width: 302px;
+	background: #e4393c;
+	height: 31px;
+	line-height: 31px;
+	color: #fff;
+	font-size: 20px;
+	margin: 0 auto;
+	margin-bottom: 20px;
+	cursor: pointer;
+}
+
+.more {
+	padding-left: 20px;
+	padding-right: 20px;
+	line-height: 50px;
+	border-top: 1px solid #f4f4f4;
+	height: auto;
+	background-color: #fcfcfc;
+}
+
+.more a {
+	font-size: 12px;
+	color: #353131;
+}
+
+.more a:hover {
+	color: #C81623;
+	text-decoration: underline;
+}
+
+.qq,
+.wx {
+	float: left;
+}
+
+.qq i,
+.wx i {
+	width: 19px;
+	height: 18px;
+	display: inline-block;
+	vertical-align: middle;
+	background: url(img/QQ-weixin.png) no-repeat;
+}
+
+.qq i {
+	background-position: left;
+}
+
+.wx i {
+	background-position: right;
+}
+
+.zhuce {
+	float: right;
+}
+
+.zhuce i {
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	vertical-align: middle;
+	background: url(img/denglu-jing.png) no-repeat;
+	background-position: -104px -75px;
+}
+
+.fenge {
+	display: inline-block;
+	vertical-align: middle;
+	color: #BDBDBD;
+	margin: 0 10px;
+	float: left;
+}
+
+footer {
+	width: 100%;
+	padding-top: 20px;
+	text-align: center;
+	color: #353131;
+	font-size: 12px;
+	padding-bottom: 30px;
+}
+
+.links {
+	width: 1200px;
+	margin: 0 auto;
+	overflow: hidden;
+	text-align: center;
+	font-size: 12px;
+	line-height: 12px;
+	margin-bottom: 10px;
+}
+
+.links a {
+	font-size: 12px;
+	color: #353131;
+	padding: 0 10px;
+}
+
+.links a:hover {
+	color: #C81623;
+}

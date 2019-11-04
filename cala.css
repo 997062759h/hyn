@@ -1,0 +1,341 @@
+.shop-container{
+width: 990px;
+margin: 0 auto;
+}
+.shop-top{
+width: 100%;
+height: 60px;
+}
+.shop-top em{
+    font-style: normal;
+    font-size: 16px;
+    color: #E2231A;
+    margin-right: 3px;
+    font-weight: 700;
+    line-height: 60px;
+
+}
+.shop-top .num{
+    font-size: 16px;
+    color: #E2231A;
+    font-weight: 700;
+    line-height: 60px;
+}
+body{
+    background: #ffffff !important;
+}
+.card-head{
+    width: 100%;
+    height: 43px;
+    background: #f3f3f3;
+    padding: 5px 0;
+    margin-bottom: 10px;
+}
+.check{
+    width: 133px;
+    height: 100%;
+    text-align: left;
+    line-height:43px;
+    margin-left: 10px;
+    float: left;
+}
+.check input{
+   vertical-align: middle;
+}
+.shop-thing{
+    float: left;
+    width: 133px;
+    height: 100%;
+    line-height: 43px;   
+}
+.shop-right{
+    float: right;
+    width: 370px;
+    height: 100%;
+    line-height: 43px;
+}
+.shop-right div{
+    float: left;
+}
+.dprice{
+    width: 133px;
+}
+.number{
+    width: 80px;
+}
+.rem{
+    width: 80px;
+}
+.shop-wrapper{
+    margin-bottom: 20px;
+}
+.shop-name{
+    height: 30px;
+    padding-left: 11px;
+ 
+}
+.shop-text input{
+    vertical-align: middle;
+}
+.shop-text span{
+color: #666666;
+padding-left: 11px;
+font-weight: 700;
+}
+.shop-text span:hover{
+    color: red;
+}
+.shop-text i{
+    display: inline-block;
+    vertical-align: middle;
+    background: url(//misc.360buyimg.com/user/cart/css/i/cart-icons-201902.png) -84px -49px;
+    width: 16px;
+    height: 16px;
+    line-height: 100px;
+    overflow: hidden;
+    margin: 0 0 0 10px;
+}
+.item-list{
+    width: 100%;
+    height: 121px;
+    border-style: solid;
+    border-width: 2px 1px 1px;
+    border-color: #aaa #f1f1f1 #f1f1f1;
+   position: relative;
+    background: #fff4e8;
+}
+.shop-bottom{
+    width: 100%;
+    height: 52px;
+    border: 1px solid #f0f0f0;
+    background: #fff;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.shop-bottom-left{
+float: left;
+width: 400px;
+height: 100%;
+}
+.shop-bottom-right{
+float: right;
+
+height: 100%;
+position: relative;
+}
+.shop-bo-in{
+    display: inline-block;
+    line-height: 50px;
+padding-left: 11px;
+}
+.shop-bo-in input{
+    margin-right: 10px;
+    vertical-align: middle;
+}
+.shop-bottom-left li{
+   
+   display: inline-block;
+}
+.shop-bottom-left li:hover{
+    color: red;
+}
+.price-sum-extra {
+    position: absolute;
+    right: 106px;
+    top: 28px;
+    width: auto;
+    text-align: right;
+    padding-right: 5px;
+}
+
+
+.shop-bottom-left li:last-child{
+    font-weight: 700;
+}
+.shop-bottom-right li{
+    margin: 0 10px;
+    display: inline-block;
+}
+.shop-bottom-right .sel-1{
+    margin-right: 104px;
+}
+.shop-bottom-right li span{
+    color: red;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 0 2px;
+}
+
+.shop-bottom-right li:last-child{
+   
+    position: absolute;
+    right: -10px;
+    width: 94px;
+    height: 52px;
+}
+.shop-bottom-right li:last-child b{
+    display: block;
+    position: absolute;
+    width: 94px;
+    height: 52px;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    background: url(//misc.360buyimg.com/user/cart/css/i/cart-submit-btn-2018.png) 0 0 no-repeat;
+}
+.price-tips {
+    vertical-align: text-bottom;
+    display: inline-block;
+    height: 18px;
+    width: 12px;
+    background: url(//misc.360buyimg.com/user/cart/css/i/price-tips.png) 0 0 no-repeat;
+}
+.po-input{
+    position: absolute;
+    left: 11px;
+    top: 11px;
+}
+.product-item{
+    width: 100%;
+    padding-left: 40px;
+    height: 100%;
+    box-sizing: border-box;
+ 
+}
+
+.div-1{
+float: left;
+width: 300px;
+height: 107px;
+}
+.div-img{
+    float: left;
+    margin-top: 15px;
+    width: 80px;
+    height: 80px;
+    border: 1px solid #eee;
+    margin-right: 10px;
+    background: #fff;
+    padding: 0;
+    text-align: center;
+    overflow: hidden;
+}
+.div-right{
+    color: #333;
+    margin-top: 19px;
+    width: 208px;
+    height: 40px;
+    line-height: 20px;
+    overflow: hidden; 
+}
+.div-1 i {
+    display: inline-block;
+    width: 17px;
+    height: 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    background: url(//misc.360buyimg.com/user/cart/css/i/cart-icons-201902.png) no-repeat;
+    background-position: 0 -23px;
+}
+.div-right  a{
+    padding: 1px 4px 0 7px;
+    height: 16px;
+    line-height: 16px;
+    vertical-align: middle;
+}
+
+
+
+
+
+
+
+.div-2{
+    float: left;
+    width: 120px;
+    height: 55px;
+    margin-top: 19px;
+    margin-left: 15px
+}
+
+
+
+
+
+.div-3{
+    margin-top: 19px;
+    float: left;
+    width: 190px;
+    height: 70px;
+    text-align: right;
+}
+.div-3 p{
+    text-align: right;
+    margin-bottom: 5px;
+}
+.div-3 .p11{
+   
+    width: auto;
+    color: #E2231A;
+    border: 1px solid #f9d2d3;
+    padding: 1px 2px;
+    cursor: pointer;
+}
+.div-4{
+    padding-left: 20px;
+    margin-top: 19px;
+    float: left;
+    width: 98px;
+    height: 47px;
+    
+font-size: 0;
+}
+.div-4 input{
+    display: inline-block;
+    width: 46px;
+    height: 24px;
+    text-align: center;
+    vertical-align: middle;
+  box-shadow: 0;
+  border: 1px solid #cacbcb;
+    box-sizing: border-box;
+}
+.div-4 span{
+    vertical-align: middle;
+    line-height: 18px;
+    text-align: center;
+    color: #666;
+    background: #fff;
+    border: 1px solid #cacbcb;
+    width: 17px;
+    height: 22px;
+    display: inline-block;
+    font-size: 12px;
+}
+.div-5{
+    float: left;
+    width: 80px;
+    height: 45px;
+    font-size: 12px;
+    color: #333;
+    font-weight: 700;
+    margin-top: 19px;
+    margin-left: 30px;
+}
+.div-6{
+    float: left;
+    margin-top: 19px;
+    width: 75px;
+    height: 65px;
+    text-align: left;
+}
+
+
+
+
+
+
+
+
+

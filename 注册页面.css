@@ -1,0 +1,336 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+header {
+	width: 100%;
+	height: 110px;
+	background: url(img/zhecebg.jpg) repeat-x bottom;
+}
+
+.head {
+	width: 1210px;
+	margin: 0 auto;
+	padding-top: 24px;
+}
+
+.head-left {
+	float: left;
+	overflow: hidden;
+}
+
+.logo {
+	display: block;
+	width: 160px;
+	height: 50px;
+	float: left;
+	background: url(img/jingling2.png) no-repeat left top;
+}
+
+.welcome {
+	float: left;
+	display: inline-block;
+	font-weight: 100;
+	margin-top: 10px;
+}
+
+.head-right {
+	float: right;
+	position: relative;
+	top: 40px;
+}
+
+.head-right span {
+	font-size: 16px;
+	float: right;
+	color: #999;
+}
+
+.plase {
+	font-size: 16px;
+	float: right;
+	color: red;
+}
+
+.plase:hover {
+	text-decoration: underline;
+}
+
+article {
+	width: 1210px;
+	margin: 0 auto;
+	padding-top: 50px;
+	padding-bottom: 150px;
+}
+
+.enrol {
+	width: 400px;
+	margin: 0 auto;
+}
+
+.step {
+	margin-bottom: 40px;
+}
+
+.step ul {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+}
+
+.step ul li {
+	display: inline-block;
+	text-align: center;
+}
+
+.step ul li small {
+	margin: 0 auto;
+	display: block;
+	width: 24px;
+	height: 24px;
+	line-height: 24px;
+	font-size: 12px;
+	font-weight: 700;
+	color: #C5C5C5;
+	background: url(img/jingling3.png) no-repeat;
+	background-position: -45px -200px;
+}
+
+.step ul li span {
+	display: inline-block;
+	padding-top: 10px;
+	font-size: 12px;
+	color: #C5C5C5;
+}
+
+.step ul .now small {
+	color: white;
+	background-position: 0 -200px;
+}
+
+.step ul .now span {
+	color: #3b4;
+}
+
+.next-bg-1,
+.next-bg-2 {
+	width: 124px;
+	height: 10px;
+	position: absolute;
+	top: 5px;
+	background: url(img/jingling3.png) no-repeat;
+	background-position: 0 -100px;
+}
+
+.next-bg-1 {
+	left: 55px;
+}
+
+.next-bg-2 {
+	left: 230px;
+}
+
+.call {
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+
+.cell {
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+
+.belong-to {
+	width: 108px;
+	height: 52px;
+	border-color: rgb(221, 221, 221);
+	border-top-width: 1px;
+	border-right-width: initial;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-style: solid none solid solid;
+	border-image: initial;
+	float: left;
+	text-align: center;
+	line-height: 52px;
+	font-size: 14px;
+}
+
+.belong-to i {
+	background: url(img/jingling2.png) no-repeat;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	margin-top: 15px;
+	/* margin-left: 5px; */
+	background-position: -2px -150px;
+}
+
+.number {
+	border: 1px solid rgb(221, 221, 221);
+	float: left;
+	width: 288px;
+	height: 52px;
+	position: relative;
+
+}
+
+.number input {
+	border: none;
+	outline: none;
+	font-size: 14px;
+	width: 190px;
+	height: 19px;
+	padding-bottom: 11px;
+	padding-left: 20px;
+	padding-top: 16px;
+}
+
+.judgement {
+	position: absolute;
+	display: none;
+	width: 17px;
+	height: 17px;
+	top: 20px;
+	right: 20px;
+	background: url(img/jingling2.png) no-repeat;
+	background-position: 0 -117px;
+}
+
+.tishi {
+	color: #c5c5c5;
+	height: 27px;
+	font-size: 12px;
+	padding-top: 5px;
+	float: left;
+	visibility: hidden;
+}
+
+.tishi i {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	vertical-align: text-top;
+	margin-right: 3px;
+
+	background: url(img/jingling2.png) no-repeat;
+}
+
+.on-1 i {
+	background-position: 0 -100px;
+}
+
+.on-2 {
+	color: #f91;
+}
+
+.on-2 i {
+	background-position: -17px -100px;
+}
+
+.verification {
+	width: 398px;
+	height: 52px;
+	border: 1px solid rgb(221, 221, 221);
+	text-align: center;
+	line-height: 52px;
+	font-size: 14px;
+	color: #333;
+	cursor: pointer;
+	margin-bottom: 30px;
+}
+
+.verification:hover {
+	outline: #353131 1px solid;
+}
+
+.next {
+	width: 400px;
+	height: 54px;
+	background: red;
+	text-align: center;
+	line-height: 52px;
+	font-size: 14px;
+	color: white;
+	cursor: pointer;
+	margin-bottom: 10px;
+}
+
+.else {
+	width: 400px;
+}
+
+.enterprise {
+	float: left;
+}
+
+.else span {
+	display: inline-block;
+	margin: 0 8px 2px 0;
+	vertical-align: middle;
+	width: 26px;
+	height: 26px;
+	background: url(img/jingling3.png) no-repeat;
+}
+
+.else a {
+	color: #353131;
+}
+
+.else a:hover {
+	color: #C81623;
+}
+
+.enterprise span {
+	background-position: 0 -160px;
+}
+
+.foreign span {
+	background-position: -40px -160px;
+}
+
+.foreign {
+	float: right;
+}
+
+
+
+
+
+footer {
+	width: 100%;
+	padding-top: 20px;
+	text-align: center;
+	color: #353131;
+	font-size: 12px;
+	padding-bottom: 30px;
+}
+
+.links {
+	width: 1200px;
+	margin: 0 auto;
+	overflow: hidden;
+	text-align: center;
+	font-size: 12px;
+	line-height: 12px;
+	margin-bottom: 10px;
+}
+
+.links a {
+	font-size: 12px;
+	color: #353131;
+	padding: 0 10px;
+}
+
+.links a:hover {
+	color: #C81623;
+}

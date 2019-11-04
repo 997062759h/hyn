@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>京东</title>
+    <link rel="stylesheet" href="京东.css">
+    <link rel="stylesheet" href="cala.css">
+
+</head>
+
+<body>
+
+    <!--头部  -->
+    <div id="shortcut">
+        <div class="center">
+            <ul class="fl">
+                <li class="shortcut_btn">
+                    <a href="" title="北京">北京</a>
+                </li>
+            </ul>
+            <ul class="fr">
+                <li class="ttbar_login">
+                    <a href="javascript:void(0)" class="link_login">你好,请登录</a>
+                    <a href="javascript:void(0)" class="link_regist">免费注册</a>
+                </li>
+                <li class="spacer"></li>
+                <li>
+                    <a href="">我的订单</a>
+                </li>
+                <li class="spacer"></li>
+                <li>
+                    <a href="">我的京东 v</a>
+                </li>
+                <li class="spacer"></li>
+                <li>
+                    <a href="">京东会员</a>
+                </li>
+                <li class="spacer"></li>
+                <li>
+                    <a href="" class="link_regist">企业采购 v</a>
+                </li>
+                <li class="spacer"></li>
+                <li>
+                    <a href="">客户服务 v</a>
+                </li>
+                <li class="spacer"></li>
+                <li>
+                    <a href="">网站导航 v</a>
+                </li>
+                <li class="spacer"></li>
+                <li>
+                    <a href="">手机京东</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 第二部分 -->
+    <div class="header">
+        <div class="header-c">
+            <div class="logo">
+                <a href="JavaScript:;"></a>
+            </div>
+            <div class="search">
+                <div class="search-m">
+                    <div class="form">
+                        <input type="text">
+                        <button>🔍</button>
+                    </div>
+                    <div id="settleup">
+                        <div>
+                            <i class="iconfont">🛒</i>
+                            <a href="">我的购物车</a>
+                            <i class="cont">0</i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hotwords">
+                <a href="JavaScript:;" style="color: #e1251b;" id="jd">京东男人节</a>
+                <a href="JavaScript:;">移动硬盘</a>
+                <a href="JavaScript:;">饮料</a>
+                <a href="JavaScript:;">家装节</a>
+                <a href="JavaScript:;">澳新爆品</a>
+                <a href="JavaScript:;">宝宝护肤</a>
+                <a href="JavaScript:;">秋季美妆</a>
+                <a href="JavaScript:;">自营耳机</a>
+            </div>
+            <div class="navitems">
+                <ul class="navitems-group1">
+                    <li>
+                        <a href="JavaScript:;" class="a">优惠券</a>
+                    </li>
+                    <li>
+                        <a href="JavaScript:;">PLUS会员</a>
+                    </li>
+                    <li>
+                        <a href="JavaScript:;">品牌闪购</a>
+                    <li>
+                        <a href="JavaScript:;">拍卖</a>
+                    </li>
+                    <li>
+                        <a href="JavaScript:;">京东时尚</a>
+                    </li>
+                    <li>
+                        <a href="JavaScript:;">京东超市</a>
+                    </li>
+                    <li>
+                        <a href="JavaScript:;">京东生鲜</a>
+                    </li>
+                    <li>
+                        <a href="JavaScript:;">海囤全球</a>
+                    </li>
+                    <li>
+                        <a href="JavaScript:;">京东金融</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="treasure">
+                <a href="JavaScript:;"></a>
+            </div>
+        </div>
+    </div>
+    <!-- 商品计算部分 -->
+    <div class="shop-container">
+        <div class="shop-top">
+            <em>全部商品</em>
+            <span class="num">0</span>
+        </div>
+        <div class="card-head">
+            <div class="check">
+                <input type="checkbox"> 全选
+            </div>
+            <div class="shop-thing">
+                商品
+            </div>
+            <div class="shop-right">
+                <div class="dprice">
+                    单价
+                </div>
+                <div class="number">
+                    数量
+                </div>
+                <div class="rem">
+                    小计
+                </div>
+                <div class="product">
+                    操作
+                </div>
+            </div>
+        </div>
+        <div class="shop-wul">
+        </div>
+
+
+        <div class="shop-bottom">
+            <div class="shop-bottom-left">
+                <div class="shop-bo-in">
+                    <input type="checkbox">全选
+                </div>
+                <li>删除选中商品</li>
+                <li>移到关注</li>
+                <li>清理购物车</li>
+            </div>
+            <div class="shop-bottom-right">
+                <li class="sel-0">
+                    已选择<span>0</span>件商品
+                </li>
+                <li class="sel-1">
+                    总价：<span>$</span><span class="cala_price"></span>
+                    <span class="price-tips"></span>
+                </li>
+                <li class="sel-2">
+                    <b></b>
+                </li>
+            </div>
+            <div id="price-sum-extra-1" class="price-sum-extra"><span class="">促销：</span><span class="">-¥0.00</span>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+</body>
+<script src="js/ajsx.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	var num =window.location.search.substring(1)
+	var arr0=JSON.parse(localStorage.getItem("arr"))
+	var arr1=[]
+	for(var i=0;i<arr0.length;i++){
+	    if(arr1.indexOf(arr0[i])==-1){
+	        arr1.push(arr0[i])
+	    }
+	}
+	var shop_wul=document.getElementsByClassName("shop-wul")[0]
+	var cala_price=document.getElementsByClassName("cala_price")[0]
+	var shop_bottom_left=document.getElementsByClassName("shop-bottom-left")[0]
+	ajax("json/推荐.json",function(str){
+		var arr2=JSON.parse(str)
+		console.log(arr2)
+		for(let i=0;i<arr1.length;i++){
+			
+			var num2=arr1[i]
+			shop_wul.innerHTML+=`
+			<div class="shop-wrapper" data="${arr1[i]}" >
+			    <div class="shop-name">
+			        <div class="shop-text">
+			            <input type="checkbox">
+			            <span>店铺名称</span>
+			            <i></i>
+			        </div>
+			
+			    </div>
+			    <div class="item-list">
+			        <div class="po-input">
+			            <input type="checkbox">
+			        </div>
+			        <div class="product-item">
+			        <div class="div-1">
+			                <div class="div-img">
+			                    <img src=${arr2[0].list[num2].content.img[0]} alt="" style="width: 100%; height:100%">
+			                </div>
+			                <div class="div-right">
+			                    <p> ${arr2[0].list[num2].txt}</p>
+			                   
+			                </div>
+			                <div style="margin-top: 10px">
+			                        <i class="jd-service-icon"></i>
+			                        <a data-tips="选服务" class="ftx-03 jd-service" href="#none">选服务</a>
+			                </div>
+			        </div>
+			        <div class="div-2">
+			            <p>1717潮拖黑色</p>
+			            <p>45</p>
+			        </div>
+			        <div class="div-3">
+			            <p>${arr2[0].list[num2].jiage}</p>
+			            <a class="p11">白条3期免息</a>
+			        </div>
+			        <div class="div-4">
+			          <span>-</span>
+			            <input type="text" id="shuliang" value="1">
+			          <span>+</span>
+			        </div>
+			        <div class="div-5">
+			            <span>${arr2[0].list[num2].jiage}</span>
+			        </div>
+			        <div class="div-6">
+			            <p>删除</p>
+			            <p>移到我的关注</p>
+			        </div>
+			        </div>
+			
+			    </div>
+			
+			</div>
+			`
+			
+			
+		}
+		function zongjia(){
+			var jiage=0
+			var div_5=document.getElementsByClassName("div-5")
+			for(let i=0;i<div_5.length;i++){
+				jiage+=Number(div_5[i].children[0].innerText)
+			}
+			cala_price.innerHTML=jiage
+		}
+		zongjia()
+		shop_bottom_left.children[3].onclick=function(){
+			arr=[]
+			localStorage.setItem("arr",arr)
+			shop_wul.innerHTML=``
+			zongjia()
+		}
+		var shop_wrapper=document.getElementsByClassName("shop-wrapper")
+		shop_bottom_left.children[1].onclick=function(){
+			for(let i=0;i<shop_wrapper.length;i++){
+				if(shop_wrapper[i].children[1].children[0].children[0].checked){
+					var data=parseInt(shop_wrapper[i].getAttribute("data"))
+					arr1=[]
+					for(let i=0;i<arr0.length;i++){
+						if(arr0[i]==data){
+							continue
+						}
+					    if(arr1.indexOf(arr0[i])==-1){
+					        arr1.push(arr0[i])
+					    }
+					}
+					shop_wul.removeChild(shop_wul.children[i])
+					i--
+				}
+			}
+			zongjia()
+			localStorage.setItem("arr",JSON.stringify(arr1))
+		}
+		var check=false
+		shop_bottom_left.children[0].onclick=function(){
+			if(shop_bottom_left.children[0].children[0].checked){
+				for(let i=0;i<shop_wrapper.length;i++){
+					shop_wrapper[i].children[1].children[0].children[0].checked=true
+				}
+			}else{
+				for(let i=0;i<shop_wrapper.length;i++){
+					shop_wrapper[i].children[1].children[0].children[0].checked=false
+				}
+			}
+			zongjia()
+		}
+	})
+</script>
+
+</html>

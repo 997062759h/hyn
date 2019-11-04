@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="detail.css">
+    <script src="js/封装.js"></script>
+</head>
+
+<body>
+    <div class="top">
+        <span class="title1"></span>
+    </div>
+
+    <!-- 内容 -->
+    <div class="container">
+        <div class="left">
+
+
+            <div id="demo">
+                <div id="small-box">
+                    <div id="mark"></div>
+                    <div id="float-box"></div>
+                    <!-- <img src="//img12.360buyimg.com/n1/jfs/t26248/173/1044812409/118882/e4976054/5bc06a74N01199b37.jpg" /> -->
+                </div>
+                <div id="big-box">
+                    <!-- <img src="//img12.360buyimg.com//n0/jfs/t25519/178/1973516898/118958/c450ae5d/5bc06a73N9744dbea.jpg" /> -->
+                </div>
+
+            </div>
+            <div class="product">
+                <a href="javascript:void(0)" class="pro-left"></a>
+                <div class="product-wrap">
+                    <div class="product-ul">
+                       
+                    </div>
+                </div>
+                <a href="javascript:void(0)" class="pro-right pro-a"></a>
+
+            </div>
+        </div>
+        <div class="right">
+            <div class="product-meta">
+                <!-- <h1>ANKERS 麻将机 全自动实木餐桌两用中式电动高档麻将桌家用静音四口机明清系列 清风雅韵856</h1>
+                        <div class="sku">
+                            <span class="span1">①领券减100</span>
+                            <span>6.09英寸珍珠屏，64GB大内存，后置1300万像素，12nm八核处理器</span>
+                        </div> -->
+            </div>
+            <div class="infomation">
+                <div class="info-mation">
+                    <!-- <label>价&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格</label>
+                             <span>11200.00</span> -->
+                </div>
+                <div class="info-mation">
+                    <label>优&nbsp;&nbsp;惠&nbsp;&nbsp;券</label>
+                    <div class="product-tickit">
+                        领券直减100
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="btn">
+                <button class="btn-lg">
+                    加入购物车
+                </button>
+            </div>
+        </div>
+
+
+    </div>
+
+
+</body>
+<script src="js/封装.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/ajsx.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	var num=window.location.search.substring(1)
+	var small_box=document.getElementById("small-box")
+	var big_box=document.getElementById("big-box")
+	var product_ul=document.getElementsByClassName("product-ul")[0]
+	var title1=document.getElementsByClassName("title1")[0]
+	var product_meta=document.getElementsByClassName("product-meta")[0]
+	var pro_left = document.getElementsByClassName("pro-left")[0]
+	var pro_right = document.getElementsByClassName("pro-right")[0]
+	var info_mation=document.getElementsByClassName("info-mation")[0]
+	ajax("json/推荐.json",function(str){
+		var arr=JSON.parse(str)
+		small_box.innerHTML=`
+		<div id="mark"></div>
+		<div id="float-box"></div>
+		<img src=${arr[0].list[num].content.img[0]} >
+		`
+		big_box.innerHTML=`
+		<img src=${arr[0].list[num].content.img[0]} >
+		`
+		title1.innerHTML=`
+		${arr[0].list[num].txt}
+		`
+		product_meta.innerHTML=`
+		<h1>${arr[0].list[num].txt}</h1>
+		`
+		info_mation.innerHTML=`
+		<label>价&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格</label>
+		         <span>${arr[0].list[num].jiage}</span>
+		`
+		
+		for(let i=0;i<arr[0].list[num].content.img.length;i++){
+			product_ul.innerHTML+=`
+			<div class="product-img">
+			    <img src=${arr[0].list[num].content.img[i]}>
+			</div>
+			`
+		}
+		pro_left.onclick = function () {
+		    startMove(0, "left", product_ul)
+		
+		}
+		pro_right.onclick = function () {
+		    startMove(-58, "left", product_ul)
+		
+		}
+		var objDemo = document.getElementById("demo");
+		var objSmallBox = document.getElementById("small-box");
+		var objMark = document.getElementById("mark");
+		var objFloatBox = document.getElementById("float-box");
+		var objBigBox = document.getElementById("big-box");
+		var objBigBoxImage=big_box.getElementsByTagName("img")[0];
+		objMark.onmouseover = function () {
+		    objFloatBox.style.display = "block"
+		    objBigBox.style.display = "block"
+		}
+		
+		objMark.onmouseout = function () {
+		    objFloatBox.style.display = "none"
+		    objBigBox.style.display = "none"
+		}
+		
+		objMark.onmousemove = function (ev) {
+		
+		    var _event = ev || window.event;  //兼容多个浏览器的event参数模式
+		
+		    var left = _event.clientX - objDemo.offsetLeft - objSmallBox.offsetLeft - objFloatBox.offsetWidth / 2;
+		    var top = _event.clientY - objDemo.offsetTop - objSmallBox.offsetTop - objFloatBox.offsetHeight / 2;
+		
+		    if (left < 0) {
+		        left = 0;
+		    } else if (left > (objMark.offsetWidth - objFloatBox.offsetWidth)) {
+		        left = objMark.offsetWidth - objFloatBox.offsetWidth;
+		    }
+		
+		    if (top < 0) {
+		        top = 0;
+		    } else if (top > (objMark.offsetHeight - objFloatBox.offsetHeight)) {
+		        top = objMark.offsetHeight - objFloatBox.offsetHeight;
+		
+		    }
+		
+		    objFloatBox.style.left = left + "px";   //oSmall.offsetLeft的值是相对什么而言
+		    objFloatBox.style.top = top + "px";
+		
+		    var percentX = left / (objMark.offsetWidth - objFloatBox.offsetWidth);
+		    var percentY = top / (objMark.offsetHeight - objFloatBox.offsetHeight);
+		
+		    objBigBoxImage.style.left = -percentX * (objBigBoxImage.offsetWidth - objBigBox.offsetWidth) + "px";
+		    objBigBoxImage.style.top = -percentY * (objBigBoxImage.offsetHeight - objBigBox.offsetHeight) + "px";
+		}
+	})
+	var btn_lg=document.getElementsByClassName("btn-lg")[0]
+	btn_lg.onclick=function(){
+		window.open("shop.html?"+num)
+	}
+</script>
+</html>

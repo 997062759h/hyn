@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>京东</title>
+    <link rel="stylesheet" href="京东.css">
+    <script src="./js/ajsx.js"></script>
+    <!-- <script src="./js/京东.js"></script> -->
+    <!-- <script src="./js/封装.js"></script> -->
+    <style>
+        .success-cont {
+            width: 1200px;
+            height: 126.8px;
+            margin: 0 auto;
+        }
+
+        .success-top {
+            position: relative;
+            padding-left: 35px;
+            margin: 20px 0;
+        }
+
+        .succ-icon {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 25px;
+            height: 25px;
+            overflow: hidden;
+            background: url(//misc.360buyimg.com/user/cart/widget/addtocart-201608/i/addtocart-icons.png) 0 0 no-repeat;
+        }
+
+        .success-top h3 {
+            font-size: 18px;
+            line-height: 25px;
+            font-weight: 400;
+            color: #71b247;
+        }
+
+        .p-img {
+            float: left;
+            width: 60px;
+            height: 60px;
+            margin-right: 10px;
+            border: 1px solid #e8e8e8;
+        }
+
+        .p-img img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .p-info {
+            float: left;
+            width: 520px;
+            margin: 0;
+        }
+
+        .p-name {
+            width: 100%;
+            line-height: 28px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-size: 14px;
+        }
+
+        .p-extra {
+            display: inline-block;
+            display: block;
+            color: #aaa;
+        }
+
+        .succ-btn {
+            float: right;
+            font-size: 16px;
+            width: 336px;
+            height: 126px;
+        }
+
+        .detail {
+            width: 158px;
+            height: 36px;
+            background: #fff;
+            color: #E2231A;
+            text-align: center;
+            line-height: 36px;
+            float: left;
+            margin-right: 10px;
+
+        }
+
+        .shop {
+            width: 168px;
+            height: 36px;
+            text-align: center;
+            line-height: 36px;
+            float: left;
+            color: #ffffff;
+            background: #E2231A;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="search-fix">
+        <div class="search-center">
+
+        </div>
+    </div>
+    <div class="search-down">
+
+    </div>
+
+    <!--头部  -->
+    <div id="shortcut">
+        <div class="center">
+            <ul class="fl">
+                <li class="shortcut_btn">
+                    <a href="" title="北京">北京</a>
+                </li>
+            </ul>
+            <ul class="fr">
+                <li class="ttbar_login">
+                    <a href="javascript:void(0)" class="link_login">你好,请登录</a>
+                    <a href="javascript:void(0)" class="link_regist">免费注册</a>
+                </li>
+                <li class="spacer"></li>
+                <li>
+                    <a href="">我的订单</a>
+                </li>
+                <li class="spacer"></li>
+                <li>
+                    <a href="">我的京东 v</a>
+                </li>
+                <li class="spacer"></li>
+                <li>
+                    <a href="">京东会员</a>
+                </li>
+                <li class="spacer"></li>
+                <li>
+                    <a href="" class="link_regist">企业采购 v</a>
+                </li>
+                <li class="spacer"></li>
+                <li>
+                    <a href="">客户服务 v</a>
+                </li>
+                <li class="spacer"></li>
+                <li>
+                    <a href="">网站导航 v</a>
+                </li>
+                <li class="spacer"></li>
+                <li>
+                    <a href="">手机京东</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 第二部分 -->
+    <div class="header">
+        <div class="header-c">
+            <div class="logo">
+                <a href="JavaScript:;"></a>
+            </div>
+            <div class="search">
+                <div class="search-m">
+                    <div class="form">
+                        <input type="text">
+                        <button>🔍</button>
+                    </div>
+                    <div id="settleup">
+                        <div>
+                            <i class="iconfont">🛒</i>
+                            <a href="">我的购物车</a>
+                            <i class="cont">0</i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hotwords">
+                <a href="JavaScript:;" style="color: #e1251b;" id="jd">京东男人节</a>
+                <a href="JavaScript:;">移动硬盘</a>
+                <a href="JavaScript:;">饮料</a>
+                <a href="JavaScript:;">家装节</a>
+                <a href="JavaScript:;">澳新爆品</a>
+                <a href="JavaScript:;">宝宝护肤</a>
+                <a href="JavaScript:;">秋季美妆</a>
+                <a href="JavaScript:;">自营耳机</a>
+            </div>
+            <div class="navitems">
+                <ul class="navitems-group1">
+                    <li>
+                        <a href="JavaScript:;" class="a">优惠券</a>
+                    </li>
+                    <li>
+                        <a href="JavaScript:;">PLUS会员</a>
+                    </li>
+                    <li>
+                        <a href="JavaScript:;">品牌闪购</a>
+                    <li>
+                        <a href="JavaScript:;">拍卖</a>
+                    </li>
+                    <li>
+                        <a href="JavaScript:;">京东时尚</a>
+                    </li>
+                    <li>
+                        <a href="JavaScript:;">京东超市</a>
+                    </li>
+                    <li>
+                        <a href="JavaScript:;">京东生鲜</a>
+                    </li>
+                    <li>
+                        <a href="JavaScript:;">海囤全球</a>
+                    </li>
+                    <li>
+                        <a href="JavaScript:;">京东金融</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="treasure">
+                <a href="JavaScript:;"></a>
+            </div>
+        </div>
+    </div>
+    <div class="success-cont">
+        <div class="success-top"><b class="succ-icon"></b>
+            <h3 class="ftx-02">商品已成功加入购物车！</h3>
+        </div>
+        <div class="p-item">
+            <div class="p-img">
+                <img
+                    src="//img10.360buyimg.com/cms/s60x60_jfs/t1/69551/12/6159/165351/5d43bd18E92789a81/bff53b30a710daa4.jpg">
+            </div>
+            <div class="p-info">
+                <div class="p-name">
+                    内增高女鞋休闲鞋女2019夏季新款皮面女鞋平底运动学生鞋女 黑色 此款为标准码
+                </div>
+                <div class="p-extra">
+                    <span class="txt" title="黑色">颜色：黑色</span>
+                    <span class="txt" title="此款为标准码">尺码：此款为标准码</span>
+                    <span class="txt">/ 数量：1</span>
+                </div>
+            </div>
+
+        </div>
+        <div class="succ-btn">
+            <div class="detail">
+                查看商品详情
+            </div>
+            <div class="shop">去购物车结算</div>
+        </div>
+    </div>
+    <script>
+
+        var num = parseInt(window.location.search.substring(1))
+       ajax("json/推荐.json", function (str) {
+           var arr = JSON.parse(str)
+           var p_img = document.getElementsByClassName("p-img")[0]
+           var p_name = document.getElementsByClassName("p-name")[0]
+           p_img.innerHTML = `
+               <img src=${arr[0].list[num].content.img[0]}>
+             `
+           p_name.innerHTML = `
+               ${arr[0].list[num].txt}
+             `
+
+        }, function () { })
+
+        var detail = document.getElementsByClassName("detail")[0]
+        var shop   = document.getElementsByClassName("shop")[0]
+        detail.onclick = function () {
+            window.open("detail.html?"+num)
+
+        }
+		
+		
+        shop.onclick = function () {
+			if(localStorage.getItem("arr")){
+				var arr=JSON.parse(localStorage.getItem("arr"))
+				arr.unshift(num)
+			}else{
+				var arr=[num]
+			}
+			localStorage.setItem("arr",JSON.stringify(arr))
+            window.open("cala.html?"+num)
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="./注册页面.css" />
+	</head>
+	<body>
+		<header>
+			<div class="head">
+				<div class="head-left">
+					<a href="" class="logo"></a>
+					<h2 class="welcome">欢迎注册</h2>
+				</div>
+				<div class="head-right">
+					<a href="" class="plase">请登录></a>
+					<span>已有账号？ </span>
+				</div>
+			</div>
+		</header>
+		<article>
+			<div class="enrol">
+				<div class="step">
+					<ul>
+						<li class="now">
+							<small>
+								1
+							</small>
+							<span>验证手机号</span>
+						</li>
+						<div class="next-bg-1">
+
+						</div>
+						<li>
+							<small>
+								2
+							</small>
+							<span class="span1">填写账号信息</span>
+						</li>
+						<div class="next-bg-2">
+
+						</div>
+						<li>
+							<small>
+								3
+							</small>
+							<span class="span2">注册成功</span>
+						</li>
+					</ul>
+				</div>
+				<div class="call" style="display: block;">
+					<div class="belong-to">
+						中国 0086
+						<i></i>
+					</div>
+					<div class="number">
+						<input type="text" id="cell1" value="" placeholder="建议使用常用手机号" />
+						<div class="judgement">
+						</div>
+					</div>
+					<p class="tishi on-1">
+						<i></i>
+						<span></span>
+					</p>
+				</div>
+				<div class="call" style="display: none;">
+					<div class="belong-to">
+						用　户　名
+					</div>
+					<div class="number">
+						<input type="text" id="cell2" value="" placeholder="您的账户名和登录名" />
+						<div class="judgement">
+						</div>
+					</div>
+					<p class="tishi on-1">
+						<i></i>
+						<span></span>
+					</p>
+				</div>
+				<div class="call"style="display: none;">
+					<div class="belong-to">
+						设 置 密 码
+					</div>
+					<div class="number">
+						<input type="text" id="cell3" value="" placeholder="建议使用两种或两种以上字符组合" />
+						<div class="judgement">
+						</div>
+					</div>
+					<p class="tishi on-1">
+						<i></i>
+						<span></span>
+					</p>
+				</div>
+				<div class="call"style="display: none;">
+					<div class="belong-to">
+						确 认 密 码
+					</div>
+					<div class="number">
+						<input type="text" id="cell4" value="" placeholder="请再次输入密码" />
+						<div class="judgement">
+						</div>
+					</div>
+					<p class="tishi on-1">
+						<i></i>
+						<span></span>
+					</p>
+				</div>
+				<div class="verification">
+					点击按钮进行验证
+				</div>
+				<div class="next">
+					下一步
+				</div>
+				<div class="else">
+					<div class="enterprise">
+						<span></span>
+						<a href="">企业用户注册</a>
+					</div>
+					<div class="foreign">
+						<span></span>
+						<a href="">海外用户注册</a>
+					</div>
+				</div>
+			</div>
+
+		</article>
+		<footer>
+			<div class="links">
+				<a href="">关于我们</a>|
+				<a href="">联系我们</a>|
+				<a href="">人才招聘</a>|
+				<a href="">商家入驻</a>|
+				<a href="">广告服务</a>|
+				<a href="">手机京东</a>|
+				<a href="">友情链接</a>|
+				<a href="">销售联盟</a>|
+				<a href="">京东社区</a>|
+				<a href="">京东公益</a>|
+				<a href="">English Site</a>
+
+			</div>
+			<p> Copyright © 2004-2019 京东JD.com 版权所有</p>
+		</footer>
+	</body>
+	<script type="text/javascript">
+		var ocell1 = document.getElementById("cell1")
+		var oJudgement1 = document.getElementsByClassName('judgement')[0]
+		var oTishi1 = document.getElementsByClassName('tishi')[0]
+		var regCell1 = /[1]\d{10}/
+		ocell1.onfocus = function() {
+			oTishi1.className = "tishi on-1"
+			oTishi1.style.visibility = "visible"
+			oTishi1.children[1].innerHTML = "验证完成后，你可以使用该手机登录或找回密码"
+		}
+		ocell1.onblur = function() {
+			var value = ocell1.value
+			if (value.match(regCell1)) {
+				oTishi1.style.visibility = "hidden"
+				oJudgement1.style.display = "block"
+			} else {
+				oTishi1.className = "tishi on-2"
+				oTishi1.children[1].innerHTML = "格式错误"
+				oJudgement1.style.display = "none"
+			}
+		}
+		
+		var ocell2 = document.getElementById("cell2")
+		var oJudgement2 = document.getElementsByClassName('judgement')[1]
+		var oTishi2 = document.getElementsByClassName('tishi')[1]
+		var regCell2 = /^[A-Za-z0-9_\\-\\u4e00-\\u9fa5]{4,20}$/
+		ocell2.onfocus = function() {
+			oTishi2.className = "tishi on-1"
+			oTishi2.style.visibility = "visible"
+			oTishi2.children[1].innerHTML = "支持中文、英文、数字、“-”、“_”的组合，4-20个字符"
+		}
+		ocell2.onblur = function() {
+			var value = ocell2.value
+			if (value.match(regCell2)) {
+				oTishi2.style.visibility = "hidden"
+				oJudgement2.style.display = "block"
+			} else {
+				oTishi2.className = "tishi on-2"
+				oTishi2.children[1].innerHTML = "格式错误"
+				oJudgement2.style.display = "none"
+			}
+		}
+		
+		var ocell3 = document.getElementById("cell3")
+		var oJudgement3 = document.getElementsByClassName('judgement')[2]
+		var oTishi3 = document.getElementsByClassName('tishi')[2]
+		var regCell3 = /^.*[A-Za-z0-9\\w_-]{6,20}.*$/
+		ocell3.onfocus = function() {
+			oTishi3.className = "tishi on-1"
+			oTishi3.style.visibility = "visible"
+			oTishi3.children[1].innerHTML = "建议使用字母、数字和符号两种及以上的组合，6-20个字符"
+		}
+		ocell3.onblur = function() {
+			var value = ocell3.value
+			if (value.match(regCell3)) {
+				oTishi3.style.visibility = "hidden"
+				oJudgement3.style.display = "block"
+			} else {
+				oTishi3.className = "tishi on-2"
+				oTishi3.children[1].innerHTML = "格式错误"
+				oJudgement3.style.display = "none"
+			}
+		}
+		
+		var ocell4 = document.getElementById("cell4")
+		var oJudgement4 = document.getElementsByClassName('judgement')[3]
+		var oTishi4 = document.getElementsByClassName('tishi')[3]
+		ocell4.onfocus = function() {
+			oTishi4.className = "tishi on-1"
+			oTishi4.style.visibility = "visible"
+			oTishi4.children[1].innerHTML = "请确认密码"
+		}
+		ocell4.onblur = function() {
+			var value = ocell4.value
+			if (ocell4.value==ocell3.value) {
+				oTishi4.style.visibility = "hidden"
+				oJudgement4.style.display = "block"
+			} else {
+				oTishi4.className = "tishi on-2"
+				oTishi4.children[1].innerHTML = "请输入相同的密码"
+				oJudgement4.style.display = "none"
+			}
+		}
+		
+		var oXyb = document.getElementsByClassName('next')[0];
+		var small1 = document.getElementsByTagName('small')[1];
+		var small2 = document.getElementsByTagName('small')[2];
+		var next_bg_1 = document.getElementsByClassName('next-bg-1')[0];
+		var next_bg_2 = document.getElementsByClassName('next-bg-2')[0];
+		var oSpan1 = document.getElementsByClassName('span1')[0];
+		var oSpan2 = document.getElementsByClassName('span2')[0];
+		var oCall1 = document.getElementsByClassName('call')[0];
+		var oCall2 = document.getElementsByClassName('call')[1];
+		var oCall3 = document.getElementsByClassName('call')[2];
+		var oCall4 = document.getElementsByClassName('call')[3];
+		var verification = document.getElementsByClassName('verification')[0];
+		oXyb.onclick =function(){
+			if(oJudgement1.style.display=="block"){
+				small1.style.color="white";
+				small1.style.backgroundPositionX=0+'px';
+				next_bg_1.style.backgroundPositionY=-130+"px";
+				oSpan1.style.color="#3b4";
+				oCall1.style.display="none";
+				oCall2.style.display="block";
+				oCall3.style.display="block";
+				oCall4.style.display="block";
+				verification.style.display="none";
+			}else{
+				alert("请输入正确手机号码")
+			}
+			if(oJudgement2.style.display=="block"&&oJudgement3.style.display=="block"&&oJudgement4.style.display=="block"){
+				var Storage = window.localStorage;
+				for(let i =0;i<Storage.length;i++){
+					if(ocell2.value==Storage.key(i)){
+						alert("用户名存在")
+						return 0;
+					}
+						
+					
+				}
+				var data={
+							"userName" :ocell2.value,
+							"mima" :ocell3.value
+						}
+						Storage.setItem(ocell2.value,JSON.stringify(data))
+						window.open("登录界面.html","_self");
+			}
+		}
+	</script>
+</html>
